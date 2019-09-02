@@ -38,13 +38,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [X] Explain the difference between `Relational Databases` and `SQL`.
 
-- [ ] Why do tables need a `primary key`?
+        the difference between `Relational Databases` and `SQL` is that `Relational Databases` is a system that manages storage, querying, and updating. 'SQL' is a language which is typically used to query the `Relational Databases`.
 
-- [ ] What is the name given to a table column that references the primary key on another table.
+- [X] Why do tables need a `primary key`?
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+        Because it's a way to uniquely identify each entry in the database.
+
+- [X] What is the name given to a table column that references the primary key on another table.
+
+        These are called 'Foreign keys'. They are used for creating links between tables. Whereas a primary key is used to id rows in a table, foreign keys are used connect a record in one table to a record in a second table.
+
+- [X] What do we need in order to have a _many to many_ relationship between two tables.
+
+        We'll need to an intermediary table that holds 'Foreign keys' that reference the primary key on the related tables.
 
 ## Minimum Viable Product
 

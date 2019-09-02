@@ -13,14 +13,14 @@ exports.up = function(knex) {
         })
         .createTable('task', tbl => {
             tbl.increments();
-            tbl.integer('project_id').unsigned().notNullable().references('id').inTable('project');
+            tbl.integer('project_id').unsigned().notNullable().references('id').inTable('project').onDelete('CASCADE').onUpdate('CASCADE');
             tbl.string('task_description', 228).notNullable();
             tbl.text('task_notes');
             tbl.boolean('task_complete').notNullable().defaultTo(false);
         })
         .createTable('project_resource', tbl => {
-            tbl.integer('project_id').unsigned().notNullable().references('id').inTable('project');
-            tbl.integer('resource_id').unsigned().notNullable().references('id').inTable('resource');
+            tbl.integer('project_id').unsigned().notNullable().references('id').inTable('project').onDelete('CASCADE').onUpdate('CASCADE');
+            tbl.integer('resource_id').unsigned().notNullable().references('id').inTable('resource').onDelete('CASCADE').onUpdate('CASCADE');
             tbl.primary(['project_id', 'resource_id']);
         })
 };
